@@ -18,16 +18,19 @@
   align-items: center;
 }
 .info {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   margin-top: -15px;
 }
+
 .shortInfo {
   font-size: 18px;
 }
 
-.google {
+.google,
+.welcome,
+.short {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,10 +47,15 @@
   align-items: center;
 }
 
+.welcome {
+  font-family: "Sofia", sans-serif;
+}
+.shortInfo {
+  margin-top: -10px;
+}
 @media only screen and (max-width: 600px) {
   .login {
     max-width: fit-content;
     margin: 35% auto;
-
   }
 }

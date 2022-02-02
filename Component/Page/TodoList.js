@@ -48,6 +48,7 @@ const TodoList = () => {
           color={"white"}
           height={"5%"}
           width={"10%"}
+          style={{ minHeight: "10px" }}
         />
       ) : (
         <Grid container spacing={3} direction={"column"} columns={3}>

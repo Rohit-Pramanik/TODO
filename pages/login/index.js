@@ -23,7 +23,7 @@ const index = () => {
         color={"white"}
         height={"15%"}
         width={"15%"}
-        heig={"100vh"}
+        style={{ minHeight: "100vh" }}
       />
     );
   } else {

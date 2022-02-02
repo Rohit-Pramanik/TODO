@@ -2,7 +2,7 @@ import { Box, CircularProgress, Grid } from "@mui/material";
 import React from "react";
 import ReactLoading from "react-loading";
 
-const Loading = ({ type, color, height, width, heig }) => {
+const Loading = ({ type, color, height, width, style }) => {
   return (
     <div>
       <Grid
@@ -11,7 +11,7 @@ const Loading = ({ type, color, height, width, heig }) => {
         direction={"column"}
         justifyContent={"center"}
         alignItems={"center"}
-        style={{ minHeight: { heig } || "1px" }}
+        style={style}
       >
         <ReactLoading type={type} color={color} height={height} width={width} />
       </Grid>
