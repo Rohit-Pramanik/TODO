@@ -27,7 +27,6 @@ const TodoHead = () => {
   const router = useRouter();
   const userImage = userData.image;
 
-  console.log(userData);
   const handleCloseUserMenu = (e) => {
     e.preventDefault();
     dispatch(userDelete());

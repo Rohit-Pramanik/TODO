@@ -19,7 +19,6 @@ const Home = () => {
       );
     }
   }, [session, dispatch]);
-  console.log(process.env.NEXTAUTH_URL);
 
   return (
     <div>
