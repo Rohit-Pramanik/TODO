@@ -71,7 +71,7 @@ const TodoFrom = () => {
         </Box>
         <div className={Classes.button}>
           <Button variant="contained" onClick={onSubmit}>
-            submit
+            Add Todo
           </Button>
         </div>
       </Container>

@@ -6,11 +6,13 @@ import {
   query,
   where,
 } from "firebase/firestore";
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Loading from "../Add/Loading";
 import { db } from "../Database/Firebase";
 import TodoItem from "./TodoItem";
+import empty from "../../public/empty.svg";
 
 const TodoList = () => {
   const [firebaseData, setFirebaseData] = useState([]);
@@ -39,7 +41,21 @@ const TodoList = () => {
 
     return todoFirebaseData;
   }, [userData]);
-
+  if (firebaseData.length === 0 && !loading) {
+    return (
+      <>
+        <Image
+          src={empty}
+          alt="empty"
+          layout="responsive"
+          width={300}
+          height={175}
+          priority
+        />
+        <h3 style={{ color: "white", textAlign: "center" }}>No Data Found</h3>
+      </>
+    );
+  }
   return (
     <div>
       {loading ? (

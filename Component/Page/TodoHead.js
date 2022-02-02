@@ -22,6 +22,11 @@ const TodoHead = () => {
     setAnchorElUser(event.currentTarget);
   };
 
+  const closeUserMenu = (event) => {
+    event.preventDefault();
+    setAnchorElUser(null);
+  };
+
   const userData = useSelector((state) => state.info);
   const dispatch = useDispatch();
   const router = useRouter();
@@ -70,6 +75,7 @@ const TodoHead = () => {
                   horizontal: "right",
                 }}
                 open={Boolean(anchorElUser)}
+                onClose={closeUserMenu}
               >
                 <MenuItem onClick={handleCloseUserMenu}>
                   <Typography textAlign="center">Logout</Typography>

@@ -42,6 +42,7 @@ const TodoItem = (props) => {
       alertTodo({ type: "error", message: `You Todo ${title} is deleted!` })
     );
   };
+
   return (
     <Fragment>
       <TodoEdit open={open} handleClose={handleClose} data={props} />
