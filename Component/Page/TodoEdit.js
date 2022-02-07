@@ -5,6 +5,7 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  FormControlLabel,
   TextField,
 } from "@mui/material";
 import { doc, serverTimestamp, updateDoc } from "firebase/firestore";
@@ -81,15 +82,18 @@ const TodoEdit = (props) => {
             multiline
           />
           <DialogActions>
-            <Checkbox
-              checked={todo.complete}
-              value={todo.complete}
-              onChange={(e) => dispatch(Complete(e.target.checked))}
-              color={todo.complete ? "success" : "error"}
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={todo.complete}
+                  value={todo.complete}
+                  onChange={(e) => dispatch(Complete(e.target.checked))}
+                  color={todo.complete ? "success" : "error"}
+                />
+              }
+              label={todo.complete ? "COMPLETE" : "INCOMPLETE"}
+              style={{ color: todo.complete ? "green" : "red" }}
             />
-            <label style={{ color: todo.complete ? "green" : "red" }}>
-              {todo.complete ? "COMPLETE" : "INCOMPLETE"}
-            </label>
           </DialogActions>
         </DialogContent>
         <DialogActions>
