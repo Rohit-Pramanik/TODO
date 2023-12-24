@@ -7,9 +7,11 @@ export default NextAuth({
   secret: "secret",
   providers: [
     GoogleProvider({
-      clientId:
-        "334774191903-42e62uvovumcrmr0hl324o8edu3n15bs.apps.googleusercontent.com",
-      clientSecret: "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",
+      // clientId:
+      //   "334774191903-42e62uvovumcrmr0hl324o8edu3n15bs.apps.googleusercontent.com",
+      // clientSecret: "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",
+      clientId: '421894344563-unl4lrdkd0huud9hojnv6buf943j4m5o.apps.googleusercontent.com',
+      clientSecret: "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",
 
       authorization: {
         params: {
