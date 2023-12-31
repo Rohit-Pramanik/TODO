@@ -30,7 +30,6 @@ const Login = () => {
   const Signin = (e) => {
     e.preventDefault();
     signIn("google");
-
   };
   return (
     <Fragment>
