@@ -4,7 +4,6 @@ import Image from "next/image";
 import Classes from "./login.module.css";
 import { Button } from "@mui/material";
 import GoogleIcon from "@mui/icons-material/Google";
-import { useRouter } from "next/router";
 import { signIn } from "next-auth/react";
 import { useSession } from "next-auth/react";
 import { useDispatch } from "react-redux";
@@ -13,7 +12,6 @@ import Head from "next/head";
 import Link from "next/link";
 
 const Login = () => {
-  const router = useRouter();
   const { data: session } = useSession();
   useEffect(() => {
     if (session) {
@@ -26,14 +24,13 @@ const Login = () => {
       );
     }
   }, [session]);
-  console.log(process.env.NEXTAUTH_URL);
+
   const dispatch = useDispatch();
 
   const Signin = (e) => {
     e.preventDefault();
     signIn("google");
 
-    // router.push("/", undefined, { shallow: true });
   };
   return (
     <Fragment>
