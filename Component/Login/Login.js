@@ -26,7 +26,7 @@ const Login = () => {
       );
     }
   }, [session]);
-
+  console.log(process.env.NEXTAUTH_URL);
   const dispatch = useDispatch();
 
   const Signin = (e) => {
