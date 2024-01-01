@@ -46,7 +46,7 @@ const TodoItem = (props) => {
   return (
     <Fragment>
       <TodoEdit open={open} handleClose={handleClose} data={props} />
-      <Grid item xs={12} sm={6} md={3}>
+      <Grid item xs={12} sm={6} md={3} marginLeft={2} marginRight={2} >
         <Box sx={{ minWidth: 270 }}>
           <Card variant="outlined">
             <CardContent>
@@ -54,7 +54,7 @@ const TodoItem = (props) => {
                 {title}
               </Typography>
               <Typography sx={{ mb: 1.5 }} color="text.secondary">
-                {moment(timestamp).format("D MM Y")}
+                {moment(timestamp).format("DD MM Y")}
               </Typography>
               <Typography variant="body2">{detail}</Typography>
               <Typography
