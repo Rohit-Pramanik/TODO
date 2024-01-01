@@ -20,7 +20,6 @@ const Home = () => {
     }
   }, [session, dispatch]);
 
-
   return (
     <div>
       <Todo />
