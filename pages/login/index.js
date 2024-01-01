@@ -8,6 +8,7 @@ const index = () => {
   const { data: session } = useSession();
   const router = useRouter();
   const [loading, setLoading] = useState(true);
+  console.log({ env: process.env.NEXT_PUBLIC_USER_NAME, nextjs: process.env.userName })
 
   useEffect(() => {
     if (!session) {

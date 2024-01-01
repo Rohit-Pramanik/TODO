@@ -20,7 +20,6 @@ const Home = () => {
     }
   }, [session, dispatch]);
 
-  console.log({ env: process.env.NEXT_PUBLIC_USER_NAME , nextjs: process.env.userName })
 
   return (
     <div>
